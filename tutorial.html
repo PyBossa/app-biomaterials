@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="span12">
+        <div id="modal" class="modal hide fade">
+            <div class="modal-header">
+                <h3>Biomaterials tutorial</h3>
+            </div>
+            <div id="0" class="modal-body" style="display:none">
+                <p><strong>Hi!</strong> Welcome to the  <strong>biomaterials</strong> tutorial. We will show you, how you can help us to analyze our protein biomaterial.
+               </p> 
+               <img src="http://i.imgur.com/4RvBQIF.png" class="img-polaroid"/>
+            </div>
+            <div id="1" class="modal-body" style="display:none">
+                <p>The application is really simple. It loads a microscope image, and you have to mark it by clicking on the nanoparticles that are smaller than 72 nm, like in the following example:</p>
+                <img src="http://i.imgur.com/uyg6isL.png" class="img-polaroid"/>
+            </div>
+            <div id="2" class="modal-body" style="display:none">
+                <p>If you make a mistake, don't worry, you can undo all the steps by clicking on the button: 
+                <button class="btn"><i class="icon-undo"></i> Remove the last point</button>
+                </p>
+                <p>When you are done, click on the Save button and a new image will be loaded. That's All!!!</p>
+            </div>
+            <div class="modal-footer">
+                <a id="prevBtn" href="#" onclick="showStep('prev')" class="btn">Previous</a>
+                <a id="nextBtn" href="#" onclick="showStep('next')" class="btn btn-success">Next</a>
+                <a id="startContrib" href="../biomaterials/newtask" class="btn btn-primary" style="display:none"><i class="icon-thumbs-up"></i> Let's start!</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var step = -1;
+    function showStep(action) {
+        $("#" + step).hide();
+        if (action == 'next') {
+            step = step + 1;
+        }
+        if (action == 'prev') {
+            step = step - 1;
+        }
+        if (step == 0) {
+            $("#prevBtn").hide();
+        }
+        else {
+            $("#prevBtn").show();
+        }
+
+        if (step == 2 ) {
+            $("#nextBtn").hide();
+            $("#startContrib").show();
+        }
+        $("#" + step).show();
+    }
+
+    showStep('next');
+    $("#modal").modal('show');
+</script>
