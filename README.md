@@ -59,5 +59,5 @@ Please, see the COPYING file.
 
 Acknowledgments
 ===============
-The thumbnail has been created using a tile from a dataset supplied by Jin K.
-Montclare, PhD (Associate Professor, Chemical and Biomolecular Engineering, Polytechnic Institute of New York University).
+The thumbnail has been created using a tile from a dataset supplied by [Jin K.
+Montclare](http://faculty.poly.edu/~jmontcla/), PhD (Associate Professor, Chemical and Biomolecular Engineering, Polytechnic Institute of New York University).
